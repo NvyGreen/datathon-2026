@@ -1,5 +1,4 @@
 import pandas as pd
-
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier, NearestCentroid, NearestNeighbors
@@ -42,8 +41,6 @@ y = merged_data[property_data]
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
-from sklearn.preprocessing import MinMaxScaler
-
 scaler = MinMaxScaler()
 
 property_scaled = scaler.fit_transform(X_train)
@@ -53,12 +50,6 @@ nn = NearestNeighbors(n_neighbors=3, metric='cosine')
 nn.fit(property_scaled)
 
 distances, indices = nn.kneighbors(consumer_scaled)
-
-# top_k_houses = property.iloc[indices[0]].copy()
-# top_k_houses["Similarity"] = 1 - distances[0]
-# print(top_k_houses)
-
-
 
 knn = KNeighborsClassifier(n_neighbors=3)
 knn.fit(X_train, y_train)
@@ -72,3 +63,7 @@ print(cm)
 
 cr = classification_report(y_test, y_pred)
 print(cr)
+
+top_k_houses = property_data.iloc[indices[0]].copy()
+top_k_houses["Similarity"] = 1 - distances[0]
+print(top_k_houses)
