@@ -1,4 +1,4 @@
-import pandas as pd
+'''import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier, NearestCentroid, NearestNeighbors
@@ -55,4 +55,4 @@ distances, indices = nn.kneighbors(consumer_scaled)
 
 top_k_houses = property_data.iloc[indices[0]].copy()
 top_k_houses["Similarity"] = 1 - distances[0]
-print(top_k_houses)
+print(top_k_houses)'''
