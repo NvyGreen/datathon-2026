@@ -46,6 +46,8 @@ The project follows a modular data pipeline architecture:
 
 This structured approach ensures the system is easy to understand, maintain, and extend.
 
+<img src="assets/Datathon Architecture_v1-20260422-034427.png" alt="Diagram of architecture" width=500>
+
 
 ## Data Sources
 The project uses two primary datasets:
