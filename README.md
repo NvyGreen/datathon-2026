@@ -46,6 +46,7 @@ The project follows a modular data pipeline architecture:
 
 This structured approach ensures the system is easy to understand, maintain, and extend.
 
+The following diagram illustrates the end-to-end data pipeline and how raw inputs are transformed into personalized recommendations:  
 <img src="assets/Datathon Architecture_v1-20260422-034427.png" alt="Diagram of architecture" width=500>
 
 
@@ -83,8 +84,8 @@ To run the project:
 1. Create and activate a virtual environment
 2. Install the required Python libraries using `pip install -r requirements.txt`
 3. Place the raw datasets in the `data/raw` directory
-4. Run `src/clean_property_data.py` and `src/ConsumerData.py` to generate processed datasets in the `data/processed` directory
-5. Execute `src/CorrelationAnalysis.py` and `src/model.py` to get the analysis and models in the `outputs` directory
+4. Run `python src/clean_property_data.py` and `python src/ConsumerData.py` to generate processed datasets in the `data/processed` directory
+5. Execute `python src/CorrelationAnalysis.py` and `python src/model.py` to get the analysis and models in the `outputs` directory
 6. Review the generated outputs, including correlation reports and recommendations
 
 
